@@ -40,7 +40,7 @@ function App() {
     );
     console.log(result);
     if (result.data.status == "ok") {
-      alert("Uploaded Successfully!!!");
+      alert("Document Uploaded Successfully!");
       getPdf();
     }
   };
@@ -52,12 +52,12 @@ function App() {
   return (
     <div className="App">
       <form className="formStyle" onSubmit={submitImage}>
-        <h4>Upload Pdf in React</h4>
+        <h4>Upload PDF for Document Validation Service</h4>
         <br />
         <input
           type="text"
           className="form-control"
-          placeholder="Title"
+          placeholder="Enter Title Here"
           required
           onChange={(e) => setTitle(e.target.value)}
         />
@@ -71,24 +71,26 @@ function App() {
         />
         <br />
         <button class="btn btn-primary" type="submit">
-          Submit
+          Upload File
         </button>
       </form>
+      <br></br>
       <div className="uploaded">
-        <h4>Uploaded PDF:</h4>
+        <h4>Previously Uploaded PDFs:</h4>
         <div className="output-div">
           {allImage == null
             ? ""
             : allImage.map((data) => {
                 return (
                   <div className="inner-div">
-                    <h6>Title: {data.title}</h6>
+                    <h6>Title: {data.title} &nbsp; &nbsp;
                     <button
                       className="btn btn-primary"
                       onClick={() => showPdf(data.pdf)}
                     >
-                      Show Pdf
+                      Open {data.title}
                     </button>
+                    </h6>
                   </div>
                 );
               })}
