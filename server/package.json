@@ -2,9 +2,9 @@
     "name": "backend-pdf-upload",
     "version": "1.0.0",
     "description": "",
-    "main": "app.js",
+    "main": "server.js",
     "scripts": {
-      "start": "node backend.js"
+      "start": "node server.js"
     },
     "author": "",
     "license": "ISC",
