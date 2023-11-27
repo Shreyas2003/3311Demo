@@ -1,6 +1,6 @@
 ## How to Run this Demo
 
-Note: You need npm in order to run this application.
+Note: You need the newest version of npm and node.js in order to run this application.
 
 1. Clone this repository
 2. In the terminal, navigate to the "server" folder.
